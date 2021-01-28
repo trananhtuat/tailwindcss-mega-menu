@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .menu-item {
+        @apply p-5 inline-block border-b-4 border-black hover:border-white;
+    }
+
+    .mega-sub-item {
+        @apply block p-2 hover:bg-white hover:text-black cursor-pointer;
+    }
+
+    .mega-sub-item-title {
+        @apply block font-semibold text-xl mb-5;
+    }
+
+    .menu-sub-item {
+        @apply block px-7 py-2 hover:bg-white hover:text-black;
+    }
+}
+
+@layer utilities {
+    .sub-dropdown:hover>.sub-dropdown-content {
+        opacity: 1;
+        visibility: visible;
+        top: 0;
+    }
+
+    .sub-dropdown:hover>a {
+        background-color: #fff;
+        color: #000;
+    }
+}
